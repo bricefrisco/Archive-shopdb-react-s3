@@ -26,5 +26,8 @@ jobs:
       - name: Webpack
         run: npm build
 
+      - name: Debug
+        run: ls -lrta
+
       - name: Deploy to S3
         run: aws s3 sync build/* s3://shopdb
