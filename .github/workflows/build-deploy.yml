@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Webpack
-        run: npm run build
+        run: CI= npm run build
 
       - name: Deploy to S3
         run: aws s3 sync build/* s3://shopdb
